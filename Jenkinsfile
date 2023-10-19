@@ -23,9 +23,9 @@ pipeline {
     }
    stage('Unit Test'){
      when {
-       allOf {
-          branch 'main'
-       }
+
+       branch 'main'
+
      }
      steps {
         echo 'CI'
