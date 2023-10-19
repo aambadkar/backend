@@ -21,10 +21,15 @@ pipeline {
       }
     }
    stage('Unit Test'){
-      steps {
+     when {
+       allOf {
+          branch 'main'
+       }
+     }
+     steps {
         echo 'CI'
-      }
-    }
+     }
+   }
 
    stage('Release'){
       when {
